@@ -10,7 +10,7 @@ const {
     parseGLTFIntoXKTModel,
     writeXKTModelToArrayBuffer,
     parseMetaModelIntoXKTModel
-} = require("@xeokit/xeokit-convert/dist/xeokit-convert.cjs.js");
+} = require("@tuxmart/xeokit-convert");
 
 const program = new commander.Command();
 
@@ -20,6 +20,7 @@ program
     .option('-s, --source [file]', 'path to source glTF file')
     .option('-m, --metamodel [file]', 'path to source metamodel JSON file (optional)')
     .option('-o, --output [file]', 'path to target xkt file')
+    .option('-, --json [file]', 'path to xkt json file')
     .option('-l, --log', 'enable logging');
 
 program.on('--help', () => {
@@ -103,6 +104,12 @@ async function convert(gltfContent, metaModelContent, getAttachment, stats) {
         stats,
         log
     });
+
+    if(program.json){
+        const str = JSON.stringify(xktModel);
+        await fs.writeFile(program.json, str);
+    }
+    
     xktModel.finalize();
     stats.aabb = "[" + xktModel.aabb + "]";
     const xktArrayBuffer = writeXKTModelToArrayBuffer(xktModel);

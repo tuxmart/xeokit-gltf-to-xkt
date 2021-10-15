@@ -20,7 +20,7 @@ program
     .option('-s, --source [file]', 'path to source glTF file')
     .option('-m, --metamodel [file]', 'path to source metamodel JSON file (optional)')
     .option('-o, --output [file]', 'path to target xkt file')
-    .option('-, --json [file]', 'path to xkt json file')
+    .option('-j, --json [file]', 'path to xkt json file')
     .option('-l, --log', 'enable logging');
 
 program.on('--help', () => {

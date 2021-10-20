@@ -1,6 +1,6 @@
 # xeokit-gltf-to-xkt
 
-[![npm version](https://badge.fury.io/js/%40xeokit%2Fxeokit-gltf-to-xkt.svg)](https://badge.fury.io/js/%40xeokit%2Fxeokit-gltf-to-xkt)
+[![npm version](https://badge.fury.io/js/%40tuxmart%2Fxeokit-gltf-to-xkt.svg)](https://badge.fury.io/js/%40xeokit%2Fxeokit-gltf-to-xkt)
 
 ## Contents
 
@@ -36,15 +36,15 @@ Click on the screenshot below for a live demo of the XKTLoaderPlugin.
 
 ## Usage
 
-> * Always use the latest version of ````xeokit/xeokit-sdk```` with each new version of ````xeokit-gltf-xkt````.
+> - Always use the latest version of ````xeokit/xeokit-sdk```` with each new version of ````xeokit-gltf-xkt````.
 
 ### CLI
 
 Install locally or globally from `npm`.
 
 ```
-$ npm i @xeokit/xeokit-gltf-to-xkt
-$ ./gltf2xkt -s scene.gltf -o scene.xkt
+npm i @xeokit/xeokit-gltf-to-xkt
+./gltf2xkt -s scene.gltf -o scene.xkt
 ```
 
 ```

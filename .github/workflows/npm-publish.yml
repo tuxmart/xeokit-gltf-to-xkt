@@ -19,8 +19,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-      - working-directory: src
-        run: |
+      - run: |
           npm install
           npm run build
       - name: Publish Package

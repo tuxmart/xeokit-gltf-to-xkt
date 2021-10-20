@@ -11,9 +11,6 @@
     "bin": {
         "gltf2xkt": "./gltf2xkt.js"
     },
-    "scripts": {
-        "publish": "npm publish --access public"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/tuxmart/xeokit-gltf-to-xkt.git"
